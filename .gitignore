@@ -33,3 +33,9 @@ lerna-debug.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# Vim recovery files
+*.swp
+
+# Credentials file (to be filled by the user)
+credentials.js
