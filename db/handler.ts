@@ -1,4 +1,4 @@
-import mysql from 'mysql'
+/*import mysql from 'mysql'
 import credentials from './credentials'
 
 export interface User {
@@ -40,4 +40,4 @@ export async function listUsers(): Promise<Array<User>> {
         retValue = results
     });
     return retValue;
-}
+}*/
