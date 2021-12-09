@@ -34,7 +34,7 @@ export class UserService {
 
     listUsers(): Promise<Array<User>> {
         return new Promise((resolve, reject) => {
-            this.connection.query(`SELECT * FROM users ORDER BY 'name';`, (err, results) => {
+            this.connection.query(`SELECT * FROM users ORDER BY name;`, (err, results) => {
                 if (err) reject(err);
                 else resolve(results as Array<User>);
             });

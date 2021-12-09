@@ -34,10 +34,17 @@ section#show {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    overflow-y: scroll;
 }
 section#show button {
     padding: 0.5rem;
     font-weight: 600;
+}
+section#show .user-elem {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 0.5px #aaa solid;
+    border-radius: 0.6rem;
 }
 
 h1 {
