@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    padding: 2.5rem;
+    text-align: center;
+}
+
+main {
+    display: flex;
+}
+main section {
+    flex: 1 0 0;
+    padding: 3rem;
+}
+
+section#add form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+section#add form * {
+    margin-bottom: 0.5rem;
+}
+section#add form input, select {
+    padding: 0.2rem;
+}
+
+section#show {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+section#show button {
+    padding: 0.5rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+p.soft {
+    font-size: 0.8rem;
+    color: #666;
+}
