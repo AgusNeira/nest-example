@@ -4,6 +4,7 @@ import mysql from 'mysql2';
 import credentials from '../credentials';
 
 import User from '../interfaces/user';
+import CreateUserObj from './create-user-obj';
 
 @Injectable()
 export class UserService {
@@ -16,13 +17,16 @@ export class UserService {
         });
     }
 
-    addUser(nUser: User): Promise<string> {
+    addUser(nUser: CreateUserObj): Promise<string> {
         return new Promise((resolve, reject) => {
-            const { id, name, DNI, gender, birth } = nUser;
+            const { name, DNI, gender, birth } = nUser;
             this.connection.query(`INSERT INTO users (name, DNI, gender, birth)\
-                                  VALUES (${name}, ${DNI}, ${gender}, ${birth});`,
+                                  VALUES ('${name}', ${DNI}, '${gender}', '${birth}');`,
             err => {
-                if (err) reject('Error while adding user to table');
+                if (err) {
+                    console.log(err);
+                    reject('Error while adding user to table');
+                }
                 else resolve('Successfully added user into table');
             });
         });
