@@ -25,3 +25,9 @@ export default credentials: Credentials {
     database: 'nest_app' // MANDATORY
 }
 ```
+
+### 3. Instalación de dependencias
+Mediante `npm install` se instalan todos los paquetes necesarios para compilar y ejecutar el programa
+
+## Uso
+Por último, el programa se inicia mediante `npm run start`.
