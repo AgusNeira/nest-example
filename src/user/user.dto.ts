@@ -1,4 +1,4 @@
-export default class CreateUserObj {
+export class UserDTO {
     name: string;
     DNI: number;
     gender: string;

@@ -1,8 +1,8 @@
 import { Controller, Get, Post, Header, Body, Res } from '@nestjs/common';
 import { UserService } from './user.service';
 
-import User from '../interfaces/user';
-import CreateUserObj from './create-user-obj';
+import { User } from './user.entity';
+import { UserDTO } from './user.dto';
 
 @Controller('user')
 export class UserController {
@@ -10,14 +10,15 @@ export class UserController {
 
     @Get()
     @Header('type', 'text/json')
-    async read(): Promise<any> {
-        const users = await this.userService.listUsers();
-        return { users };
+    async read(): Promise<Object> {
+        return {
+            users: await this.userService.listUsers()
+        };
     }
 
     @Post()
-    async insert(@Body() createUserObj: CreateUserObj, @Res() res) {
-        const ret = await this.userService.addUser(createUserObj);
+    async insert(@Body() dto: UserDTO, @Res() res) {
+        const ret = await this.userService.addUser(dto);
         console.log('added user: ', ret);
         return res.redirect('/');
     }
