@@ -2,7 +2,7 @@ import Credentials from './credentials.template'
 
 const credentials: Credentials = {
     host: 'localhost',
-    user: 'nest-app',
+    username: 'nest-app',
     password: 'RNmkXERn',
     database: 'nest_app'
 }
